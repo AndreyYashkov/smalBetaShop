@@ -3,7 +3,7 @@ asgiref==3.3.1
 astroid==2.5.3
 colorama==0.4.4
 distlib==0.3.1
-Django==3.1.14
+Django
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.2.0
 drf-nested-routers==0.93.4

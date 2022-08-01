@@ -17,6 +17,7 @@ from sites.urls import router as site_router
 router = routers.NestedSimpleRouter(site_router, "domains", lookup="domain")
 router.register("catalog", ProductViewSet)
 
+
 urlpatterns = [
     path('index', Index.as_view(), name='homepage'),
     path('store', store, name='store'),

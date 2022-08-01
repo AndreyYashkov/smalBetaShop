@@ -14,6 +14,11 @@ class UserSiteSerializer(serializers.ModelSerializer):
             "name",
             "user",
         ]
+    def create(self, validated_data):
+        site_data = validated_data.pop('name')
+        user = User.objects.create(**validated_data)
+        UserSite.objects.create(user=user, **site_data)
+        return user
 
 
 class BlockSiteSerializer(serializers.ModelSerializer):
